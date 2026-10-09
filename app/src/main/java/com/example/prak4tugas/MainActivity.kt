@@ -151,7 +151,28 @@ fun ProfileCard(
                 .padding(horizontal = dimensionResource(id = R.dimen.spacing_small)),
             verticalArrangement = Arrangement.Center
         ) {
+            Text(
+                text = name,
+                color = textColor,
+                fontSize = dimensionResource(id = R.dimen.text_name_size).value.sp,
+                fontWeight = FontWeight.Bold
+            )
+            if (phone.isNotEmpty()) {
+                Text(
+                    text = phone,
+                    color = subTextColor,
+                    fontSize = dimensionResource(id = R.dimen.text_detail_size).value.sp
+                )
+            }
+            if (address.isNotEmpty()) {
+                Text(
+                    text = address,
+                    color = subTextColor,
+                    fontSize = dimensionResource(id = R.dimen.text_detail_size).value.sp
+                )
+            }
         }
-
-
 }
+
+
+
