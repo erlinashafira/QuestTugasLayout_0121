@@ -62,6 +62,17 @@ fun MainScreen(modifier: Modifier = Modifier) {
                 color = Color.Black
             )
             Spacer(modifier = Modifier.height(dimensionResource(id = R.dimen.spacing_large)))
+
+            ProfileCard(
+                cardColor = colorResource(id = R.color.card_gray),
+                name = stringResource(id = R.string.name_1),
+                phone = stringResource(id = R.string.phone_1),
+                address = stringResource(id = R.string.address_1),
+                textColor = Color.Black,
+                subTextColor = Color.DarkGray,
+                logoResId = R.drawable.logo_umy
+            )
+            Spacer(modifier = Modifier.height(dimensionResource(id = R.dimen.spacing_small)))
         }
     }
 }
