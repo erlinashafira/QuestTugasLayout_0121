@@ -115,7 +115,7 @@ fun MainScreen(modifier: Modifier = Modifier) {
     }
 }
 
-@Preview(showBackground = true)
+
 @Composable
 fun ProfileCard(
     cardColor: Color,
@@ -126,4 +126,11 @@ fun ProfileCard(
     subTextColor: Color,
     logoResId: Int
 ){
+    Card(
+        modifier = Modifier
+            .fillMaxWidth()
+            .height(dimensionResource(id = R.dimen.card_height)),
+        shape = RoundedCornerShape(dimensionResource(id = R.dimen.card_corner_radius)),
+        colors = CardDefaults.cardColors(containerColor = cardColor)
+    )
 }
