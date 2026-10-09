@@ -4,4 +4,8 @@
     <string name="app_name">Teknologi Informasi</string>
     <string name="header_title">Teknologi Informasi</string>
     <string name="header_subtitle">Universitas Muhammadiyah Yogyakarta</string>
+
+    <string name="name_1">Erlina Shafira</string>
+    <string name="phone_1"></string>
+    <string name="address_1">Kulon Progo</string>
 </resources>
