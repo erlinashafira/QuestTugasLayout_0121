@@ -45,7 +45,9 @@ fun MainScreen(modifier: Modifier = Modifier) {
         Column(
             horizontalAlignment = Alignment.CenterHorizontally,
             modifier = Modifier.fillMaxWidth()
-        ){}
+        ){
+            Spacer(modifier = Modifier.height(dimensionResource(id = R.dimen.spacing_large)))
+        }
     }
 }
 
