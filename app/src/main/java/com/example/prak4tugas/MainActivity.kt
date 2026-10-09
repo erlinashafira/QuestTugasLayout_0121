@@ -4,19 +4,20 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import androidx.compose.foundation.layout.Arrangement
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.dimensionResource
-import androidx.compose.ui.text.style.LineHeightStyle
-import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.sp
 import com.example.prak4tugas.ui.theme.Prak4TugasTheme
 
 class MainActivity : ComponentActivity() {
@@ -112,6 +113,7 @@ fun MainScreen(modifier: Modifier = Modifier) {
             fontSize = dimensionResource(id = R.dimen.text_footer_size).value.sp,
             color = Color.Black,
             modifier = Modifier.padding(bottom = dimensionResource(id = R.dimen.spacing_medium))
+        )
     }
 }
 
@@ -139,46 +141,47 @@ fun ProfileCard(
                 .padding(horizontal = dimensionResource(id = R.dimen.spacing_medium)),
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.SpaceBetween
-        )
-    }
-    Image(
-        painter = painterResource(id = logoResId),
-        contentDescription = null,
-        modifier = Modifier.size(dimensionResource(id = R.dimen.logo_size))
-    )
-    Column(
-        modifier = Modifier
-            .weight(1f)
-            .padding(horizontal = dimensionResource(id = R.dimen.spacing_small)),
-        verticalArrangement = Arrangement.Center
-    ) {
-        Text(
-            text = name,
-            color = textColor,
-            fontSize = dimensionResource(id = R.dimen.text_name_size).value.sp,
-            fontWeight = FontWeight.Bold
-        )
-        if (phone.isNotEmpty()) {
-            Text(
-                text = phone,
-                color = subTextColor,
-                fontSize = dimensionResource(id = R.dimen.text_detail_size).value.sp
-            )
+        ) {
         }
-        if (address.isNotEmpty()) {
+        Image(
+            painter = painterResource(id = logoResId),
+            contentDescription = null,
+            modifier = Modifier.size(dimensionResource(id = R.dimen.logo_size))
+        )
+        Column(
+            modifier = Modifier
+                .weight(1f)
+                .padding(horizontal = dimensionResource(id = R.dimen.spacing_small)),
+            verticalArrangement = Arrangement.Center
+        ) {
             Text(
-                text = address,
-                color = subTextColor,
-                fontSize = dimensionResource(id = R.dimen.text_detail_size).value.sp
+                text = name,
+                color = textColor,
+                fontSize = dimensionResource(id = R.dimen.text_name_size).value.sp,
+                fontWeight = FontWeight.Bold
             )
+            if (phone.isNotEmpty()) {
+                Text(
+                    text = phone,
+                    color = subTextColor,
+                    fontSize = dimensionResource(id = R.dimen.text_detail_size).value.sp
+                )
+            }
+            if (address.isNotEmpty()) {
+                Text(
+                    text = address,
+                    color = subTextColor,
+                    fontSize = dimensionResource(id = R.dimen.text_detail_size).value.sp
+                )
+            }
         }
-    }
-    Image(
-        painter = painterResource(id = logoResId),
-        contentDescription = null,
-        modifier = Modifier.size(dimensionResource(id = R.dimen.logo_size))
-    )
+        Image(
+            painter = painterResource(id = logoResId),
+            contentDescription = null,
+            modifier = Modifier.size(dimensionResource(id = R.dimen.logo_size))
+        )
 
+    }
 }
 
 
