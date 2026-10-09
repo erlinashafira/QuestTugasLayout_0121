@@ -117,8 +117,13 @@ fun MainScreen(modifier: Modifier = Modifier) {
 
 @Preview(showBackground = true)
 @Composable
-fun ProfileCard() {
-    Prak4TugasTheme {
-        Greeting("Android")
-    }
+fun ProfileCard(
+    cardColor: Color,
+    name: String,
+    phone: String,
+    address: String,
+    textColor: Color,
+    subTextColor: Color,
+    logoResId: Int
+){
 }
