@@ -125,53 +125,60 @@ fun ProfileCard(
     textColor: Color,
     subTextColor: Color,
     logoResId: Int
-){
+) {
     Card(
         modifier = Modifier
             .fillMaxWidth()
             .height(dimensionResource(id = R.dimen.card_height)),
         shape = RoundedCornerShape(dimensionResource(id = R.dimen.card_corner_radius)),
         colors = CardDefaults.cardColors(containerColor = cardColor)
-    ){
+    ) {
         Row(
             modifier = Modifier
                 .fillMaxSize()
                 .padding(horizontal = dimensionResource(id = R.dimen.spacing_medium)),
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.SpaceBetween
-        )}
-        Image(
-            painter = painterResource(id = logoResId),
-            contentDescription = null,
-            modifier = Modifier.size(dimensionResource(id = R.dimen.logo_size))
         )
-        Column(
-            modifier = Modifier
-                .weight(1f)
-                .padding(horizontal = dimensionResource(id = R.dimen.spacing_small)),
-            verticalArrangement = Arrangement.Center
-        ) {
+    }
+    Image(
+        painter = painterResource(id = logoResId),
+        contentDescription = null,
+        modifier = Modifier.size(dimensionResource(id = R.dimen.logo_size))
+    )
+    Column(
+        modifier = Modifier
+            .weight(1f)
+            .padding(horizontal = dimensionResource(id = R.dimen.spacing_small)),
+        verticalArrangement = Arrangement.Center
+    ) {
+        Text(
+            text = name,
+            color = textColor,
+            fontSize = dimensionResource(id = R.dimen.text_name_size).value.sp,
+            fontWeight = FontWeight.Bold
+        )
+        if (phone.isNotEmpty()) {
             Text(
-                text = name,
-                color = textColor,
-                fontSize = dimensionResource(id = R.dimen.text_name_size).value.sp,
-                fontWeight = FontWeight.Bold
+                text = phone,
+                color = subTextColor,
+                fontSize = dimensionResource(id = R.dimen.text_detail_size).value.sp
             )
-            if (phone.isNotEmpty()) {
-                Text(
-                    text = phone,
-                    color = subTextColor,
-                    fontSize = dimensionResource(id = R.dimen.text_detail_size).value.sp
-                )
-            }
-            if (address.isNotEmpty()) {
-                Text(
-                    text = address,
-                    color = subTextColor,
-                    fontSize = dimensionResource(id = R.dimen.text_detail_size).value.sp
-                )
-            }
         }
+        if (address.isNotEmpty()) {
+            Text(
+                text = address,
+                color = subTextColor,
+                fontSize = dimensionResource(id = R.dimen.text_detail_size).value.sp
+            )
+        }
+    }
+    Image(
+        painter = painterResource(id = logoResId),
+        contentDescription = null,
+        modifier = Modifier.size(dimensionResource(id = R.dimen.logo_size))
+    )
+
 }
 
 
