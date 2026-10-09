@@ -140,4 +140,9 @@ fun ProfileCard(
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.SpaceBetween
         )}
+        Image(
+            painter = painterResource(id = logoResId),
+            contentDescription = null,
+            modifier = Modifier.size(dimensionResource(id = R.dimen.logo_size))
+        )
 }
