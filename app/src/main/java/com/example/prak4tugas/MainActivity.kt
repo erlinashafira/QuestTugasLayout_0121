@@ -145,4 +145,13 @@ fun ProfileCard(
             contentDescription = null,
             modifier = Modifier.size(dimensionResource(id = R.dimen.logo_size))
         )
+        Column(
+            modifier = Modifier
+                .weight(1f)
+                .padding(horizontal = dimensionResource(id = R.dimen.spacing_small)),
+            verticalArrangement = Arrangement.Center
+        ) {
+        }
+
+
 }
