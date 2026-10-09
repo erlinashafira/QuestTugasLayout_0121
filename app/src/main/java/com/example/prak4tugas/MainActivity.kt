@@ -104,7 +104,14 @@ fun MainScreen(modifier: Modifier = Modifier) {
                 textColor = Color.Black,
                 subTextColor = Color.DarkGray,
                 logoResId = R.drawable.logo_umy
+            )
         }
+
+        Text(
+            text = stringResource(id = R.string.footer_copyright),
+            fontSize = dimensionResource(id = R.dimen.text_footer_size).value.sp,
+            color = Color.Black,
+            modifier = Modifier.padding(bottom = dimensionResource(id = R.dimen.spacing_medium))
     }
 }
 
