@@ -132,5 +132,12 @@ fun ProfileCard(
             .height(dimensionResource(id = R.dimen.card_height)),
         shape = RoundedCornerShape(dimensionResource(id = R.dimen.card_corner_radius)),
         colors = CardDefaults.cardColors(containerColor = cardColor)
-    )
+    ){
+        Row(
+            modifier = Modifier
+                .fillMaxSize()
+                .padding(horizontal = dimensionResource(id = R.dimen.spacing_medium)),
+            verticalAlignment = Alignment.CenterVertically,
+            horizontalArrangement = Arrangement.SpaceBetween
+        )}
 }
