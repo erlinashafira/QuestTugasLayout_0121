@@ -61,6 +61,7 @@ fun MainScreen(modifier: Modifier = Modifier) {
                 fontWeight = FontWeight.Medium,
                 color = Color.Black
             )
+            Spacer(modifier = Modifier.height(dimensionResource(id = R.dimen.spacing_large)))
         }
     }
 }
