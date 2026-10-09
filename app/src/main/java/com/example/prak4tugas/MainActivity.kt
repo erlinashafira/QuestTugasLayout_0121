@@ -28,8 +28,8 @@ class MainActivity : ComponentActivity() {
 }
 
 @Composable
-fun MainScreen(name: String, modifier: Modifier = Modifier) {
-    Text(
+fun MainScreen(modifier: Modifier = Modifier) {
+    Column(
         text = "Hello $name!",
         modifier = modifier
     )
