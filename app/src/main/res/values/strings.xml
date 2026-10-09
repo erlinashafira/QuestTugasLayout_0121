@@ -8,4 +8,12 @@
     <string name="name_1">Erlina Shafira</string>
     <string name="phone_1"></string>
     <string name="address_1">Kulon Progo</string>
+
+    <string name="name_2">Erlina S Indriani</string>
+    <string name="phone_2">20240140121</string>
+    <string name="address_2">Sentolo</string>
+
+    <string name="name_3">Erlina Shafira I</string>
+    <string name="phone_3">676767676767</string>
+    <string name="address_3">Bandung</string>
 </resources>
