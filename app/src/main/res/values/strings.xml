@@ -19,5 +19,8 @@
     <string name="phone_4">08111111111</string>
     <string name="address_4">Palembang</string>
 
+    <string name="font_bold">bold</string>
+    <string name="font_medium">medium</string>
+
     <string name="footer_copyright">Copyright, 2026</string>
 </resources>
