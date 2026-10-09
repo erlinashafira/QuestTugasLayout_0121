@@ -1,7 +1,5 @@
 <resources>
     <string name="app_name">Prak4Tugas</string>
-
-    <string name="app_name">Teknologi Informasi</string>
     <string name="header_title">Teknologi Informasi</string>
     <string name="header_subtitle">Universitas Muhammadiyah Yogyakarta</string>
 
@@ -14,11 +12,11 @@
     <string name="address_2">Sentolo</string>
 
     <string name="name_3">Erlina Shafira I</string>
-    <string name="phone_3">676767676767</string>
+    <string name="phone_3">67676767676</string>
     <string name="address_3">Bandung</string>
 
     <string name="name_4">Erlina</string>
-    <string name="phone_4">081111111111</string>
+    <string name="phone_4">08111111111</string>
     <string name="address_4">Palembang</string>
 
     <string name="footer_copyright">Copyright, 2026</string>
