@@ -53,14 +53,14 @@ fun MainScreen(modifier: Modifier = Modifier) {
                 text = stringResource(id = R.string.header_title),
                 fontSize = dimensionResource(id = R.dimen.text_title_size).value.sp,
                 fontWeight = FontWeight.Bold,
-                color = Color.Black
+                color = colorResource(id = R.color.text_black)
             )
 
             Text(
                 text = stringResource(id = R.string.header_subtitle),
                 fontSize = dimensionResource(id = R.dimen.text_subtitle_size).value.sp,
                 fontWeight = FontWeight.Medium,
-                color = Color.Black
+                color = colorResource(id = R.color.text_black)
             )
             Spacer(modifier = Modifier.height(dimensionResource(id = R.dimen.spacing_large)))
 
@@ -69,8 +69,8 @@ fun MainScreen(modifier: Modifier = Modifier) {
                 name = stringResource(id = R.string.name_1),
                 phone = stringResource(id = R.string.phone_1),
                 address = stringResource(id = R.string.address_1),
-                textColor = Color.Black,
-                subTextColor = Color.DarkGray,
+                textColor = colorResource(id = R.color.text_black),
+                subTextColor = colorResource(id = R.color.text_dark_gray),
                 logoResId = R.drawable.logo_umy
             )
             Spacer(modifier = Modifier.height(dimensionResource(id = R.dimen.spacing_small)))
@@ -102,8 +102,8 @@ fun MainScreen(modifier: Modifier = Modifier) {
                 name = stringResource(id = R.string.name_4),
                 phone = stringResource(id = R.string.phone_4),
                 address = stringResource(id = R.string.address_4),
-                textColor = Color.Black,
-                subTextColor = Color.DarkGray,
+                textColor = colorResource(id = R.color.text_black),
+                subTextColor = colorResource(id = R.color.text_dark_gray),
                 logoResId = R.drawable.logo_umy
             )
         }
@@ -111,8 +111,10 @@ fun MainScreen(modifier: Modifier = Modifier) {
         Text(
             text = stringResource(id = R.string.footer_copyright),
             fontSize = dimensionResource(id = R.dimen.text_footer_size).value.sp,
-            color = Color.Black,
-            modifier = Modifier.padding(bottom = dimensionResource(id = R.dimen.spacing_medium))
+            color = colorResource(id = R.color.text_black),
+            modifier = Modifier.padding(
+                bottom = dimensionResource(id = R.dimen.spacing_medium)
+            )
         )
     }
 }
@@ -132,57 +134,69 @@ fun ProfileCard(
         modifier = Modifier
             .fillMaxWidth()
             .height(dimensionResource(id = R.dimen.card_height)),
-        shape = RoundedCornerShape(dimensionResource(id = R.dimen.card_corner_radius)),
+        shape = RoundedCornerShape(
+            dimensionResource(id = R.dimen.card_corner_radius)
+        ),
         colors = CardDefaults.cardColors(containerColor = cardColor)
     ) {
         Row(
             modifier = Modifier
                 .fillMaxSize()
-                .padding(horizontal = dimensionResource(id = R.dimen.spacing_medium)),
+                .padding(
+                    horizontal = dimensionResource(id = R.dimen.spacing_medium)
+                ),
             verticalAlignment = Alignment.CenterVertically,
             horizontalArrangement = Arrangement.SpaceBetween
         ) {
-        }
-        Image(
-            painter = painterResource(id = logoResId),
-            contentDescription = null,
-            modifier = Modifier.size(dimensionResource(id = R.dimen.logo_size))
-        )
-        Column(
-            modifier = Modifier
-                .weight(1f)
-                .padding(horizontal = dimensionResource(id = R.dimen.spacing_small)),
-            verticalArrangement = Arrangement.Center
-        ) {
-            Text(
-                text = name,
-                color = textColor,
-                fontSize = dimensionResource(id = R.dimen.text_name_size).value.sp,
-                fontWeight = FontWeight.Bold
+            Image(
+                painter = painterResource(id = logoResId),
+                contentDescription = null,
+                modifier = Modifier.size(
+                    dimensionResource(id = R.dimen.logo_size)
+                )
             )
-            if (phone.isNotEmpty()) {
+
+            Column(
+                modifier = Modifier
+                    .weight(1f)
+                    .padding(
+                        horizontal = dimensionResource(id = R.dimen.spacing_small)
+                    ),
+                verticalArrangement = Arrangement.Center
+            ) {
                 Text(
-                    text = phone,
-                    color = subTextColor,
-                    fontSize = dimensionResource(id = R.dimen.text_detail_size).value.sp
+                    text = name,
+                    color = textColor,
+                    fontSize = dimensionResource(
+                        id = R.dimen.text_name_size
+                    ).value.sp,
+                    fontWeight = FontWeight.Bold
                 )
-            }
-            if (address.isNotEmpty()) {
-                Text(
-                    text = address,
-                    color = subTextColor,
-                    fontSize = dimensionResource(id = R.dimen.text_detail_size).value.sp
-                )
+
+                if (phone.isNotEmpty()) {
+                    Text(
+                        text = phone,
+                        color = subTextColor,
+                        fontSize = dimensionResource(
+                            id = R.dimen.text_detail_size
+                        ).value.sp
+                    )
+                }
+
+                if (address.isNotEmpty()) {
+                    Text(
+                        text = address,
+                        color = subTextColor,
+                        fontSize = dimensionResource(
+                            id = R.dimen.text_detail_size
+                        ).value.sp
+                    )
+                }
             }
         }
-        Image(
-            painter = painterResource(id = logoResId),
-            contentDescription = null,
-            modifier = Modifier.size(dimensionResource(id = R.dimen.logo_size))
-        )
-
     }
 }
+
 
 
 
