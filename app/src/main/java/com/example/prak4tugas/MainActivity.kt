@@ -73,6 +73,16 @@ fun MainScreen(modifier: Modifier = Modifier) {
                 logoResId = R.drawable.logo_umy
             )
             Spacer(modifier = Modifier.height(dimensionResource(id = R.dimen.spacing_small)))
+
+            ProfileCard(
+                cardColor = colorResource(id = R.color.card_purple),
+                name = stringResource(id = R.string.name_2),
+                phone = stringResource(id = R.string.phone_2),
+                address = stringResource(id = R.string.address_2),
+                textColor = colorResource(id = R.color.text_white),
+                subTextColor = colorResource(id = R.color.text_yellow),
+                logoResId = R.drawable.logo_umy
+            )
         }
     }
 }
