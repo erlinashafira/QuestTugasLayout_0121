@@ -54,6 +54,13 @@ fun MainScreen(modifier: Modifier = Modifier) {
                 fontWeight = FontWeight.Bold,
                 color = Color.Black
             )
+
+            Text(
+                text = stringResource(id = R.string.header_subtitle),
+                fontSize = dimensionResource(id = R.dimen.text_subtitle_size).value.sp,
+                fontWeight = FontWeight.Medium,
+                color = Color.Black
+            )
         }
     }
 }
