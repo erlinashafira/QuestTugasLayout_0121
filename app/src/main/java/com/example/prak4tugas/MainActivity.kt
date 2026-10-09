@@ -47,6 +47,13 @@ fun MainScreen(modifier: Modifier = Modifier) {
             modifier = Modifier.fillMaxWidth()
         ){
             Spacer(modifier = Modifier.height(dimensionResource(id = R.dimen.spacing_large)))
+
+            Text(
+                text = stringResource(id = R.string.header_title),
+                fontSize = dimensionResource(id = R.dimen.text_title_size).value.sp,
+                fontWeight = FontWeight.Bold,
+                color = Color.Black
+            )
         }
     }
 }
